@@ -1,0 +1,240 @@
+html {
+  font-size: 62.5%;
+}
+:root {
+  --primaryColor: rgb(14, 151, 94);
+  --secondaryColor: steelblue;
+  --tertiaryColor: white;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+}
+h1 {
+  margin: 0%;
+  color: var(--primaryColor);
+  font-size: 5rem;
+}
+nav {
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+}
+.menu {
+  background-color: rgb(14, 151, 94);
+  margin: 0%;
+  top: 0%;
+}
+.menu li {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0%;
+}
+.menu li a {
+  text-decoration: none;
+  color: var(--tertiaryColor);
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: cursive;
+}
+.menu li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.menu li:nth-child(2):hover #MedicinesList,
+.menu li:nth-child(3):hover #HealthCareList {
+  display: block;
+}
+
+#MedicinesList,
+#HealthCareList {
+  position: absolute;
+  display: none;
+  top: 4.9rem;
+  background-color: var(--tertiaryColor);
+  padding: 0%;
+  margin: 0%;
+}
+
+#MedicinesList li:hover,
+#HealthCareList li:hover {
+  background-color: var(--primaryColor);
+}
+#MedicinesList li:hover a,
+#HealthCareList li:hover a {
+  color: var(--tertiaryColor);
+}
+#MedicinesList li,
+#HealthCareList li {
+  display: block;
+}
+#MedicinesList li a,
+#HealthCareList li a {
+  color: var(--secondaryColor);
+  font-size: 1.6rem;
+}
+.animation {
+  height: 50rem;
+  width: 99%;
+  background-image: url("Images for HTML Assignment/Images/Animation/ani2.png");
+  border: 0.2rem solid var(--secondaryColor);
+  margin: 0.5rem auto;
+  background-size: cover;
+  animation-name: transform;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes transform {
+  0% {
+    background-image: url("Images for HTML Assignment/Images/Animation/ani4.jpg");
+  }
+  40% {
+    background-image: url("Images for HTML Assignment/Images/Animation/ani5.jpg");
+  }
+  50% {
+    background-image: url("Images for HTML Assignment/Images/Animation/ani3.jpg");
+  }
+  75% {
+    background-image: url("Images for HTML Assignment/Images/Animation/ani1.jpg");
+  }
+  100% {
+    background-image: url("Images for HTML Assignment/Images/Animation/ani2.png");
+  }
+}
+.container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  width: 99%;
+  justify-content: space-around;
+  margin: 0%;
+}
+.logo {
+  display: flex;
+  width: 99%;
+  align-items: center;
+  justify-content: center;
+}
+#logo img {
+  width: 8rem;
+}
+#CovidCareHeading,
+#DiabetesCareHeading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem 1rem;
+  text-align: left;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  color: var(--primaryColor);
+}
+footer {
+  background-color: var(--primaryColor);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: cursive;
+}
+.items {
+  width: 22rem;
+  height: 25rem;
+  background-color: rgb(239, 239, 240);
+  padding: 0.5rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  justify-content: space-around;
+  margin: 0%;
+  margin-bottom: 2rem;
+}
+.items > img {
+  width: auto;
+  height: 15rem;
+}
+.items > p {
+  font-size: 2rem;
+  color: var(--secondaryColor);
+  margin: 0.2rem;
+  margin: 0;
+  padding: 0;
+}
+.items > h4 {
+  margin: 0rem;
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+  color: var(--primaryColor);
+}
+.items > button {
+  border: 0.2rem solid var(--secondaryColor);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+.items > button a {
+  text-decoration: none;
+  color: orangered;
+  font-weight: bold;
+}
+.items > button:active {
+  background-color: rgb(250, 234, 230);
+  border: 0.2rem solid rgb(0, 255, 76);
+}
+.container > .items:hover {
+  width: 25rem;
+  height: 27rem;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .animation {
+    width: 99%;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .animation {
+    width: 99%;
+    height: 25rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .animation {
+    width: 99%;
+    height: 35rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (min-width: 1201px) {
+  html {
+    font-size: 72.5%;
+  }
+}
